@@ -38,16 +38,14 @@ lewej/prawej/¶rodka, pionowo do góry/na ¶rodku/na dole.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
-install signify.pl $RPM_BUILD_ROOT/%{_bindir}/signify
-install signify.1 $RPM_BUILD_ROOT/%{_mandir}/man1
+install signify.pl $RPM_BUILD_ROOT%{_bindir}/signify
+install signify.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING README
-%doc examples
-
+%doc COPYING README examples
 %attr(755,root,root) %{_bindir}/signify
 %{_mandir}/man1/*

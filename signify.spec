@@ -7,6 +7,7 @@ Release:	3
 License:	Public Domain
 Group:		Applications/Mail
 Source0:	ftp://sunsite.unc.edu/pub/Linux/utils/text/%{name}-%{version}.tar.gz
+# Source0-md5:	bd80df849f2df0f2ccecbcc171e5f3a3
 Patch0:		%{name}-home_etc.patch
 BuildArch:	noarch
 BuildRequires:	rpm-perlprov

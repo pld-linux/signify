@@ -1,8 +1,8 @@
 Summary:	Random signature generator
 Summary(pl):	Generator losowych syngaturek
 Name:		signify
-Version:	1.05
-Release:	2
+Version:	1.07
+Release:	1
 Copyright:	public domain
 Group:		Applications/Mail
 Group(pl):	Aplikacje/Poczta

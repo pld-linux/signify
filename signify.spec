@@ -2,7 +2,7 @@ Summary:	Random signature generator
 Summary(pl):	Generator losowych sygnaturek
 Name:		signify
 Version:	1.07
-Release:	2
+Release:	3
 License:	Public Domain
 Group:		Applications/Mail
 Source0:	ftp://sunsite.unc.edu/pub/Linux/utils/text/%{name}-%{version}.tar.gz

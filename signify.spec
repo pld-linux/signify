@@ -6,7 +6,7 @@ Release:	1
 Copyright:	public domain
 Group:		Applications/Mail
 Group(pl):	Aplikacje/Poczta
-Source:		ftp://sunsite.unc.edu/pub/Linux/utils/text%{name}-%{version}.tar.gz
+Source:		ftp://sunsite.unc.edu/pub/Linux/utils/text/%{name}-%{version}.tar.gz
 BuildArch:	noarch
 Requires:	perl
 BuildRoot:	/tmp/%{name}-%{version}-root

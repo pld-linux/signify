@@ -1,16 +1,6 @@
---- signify/README	Tue Aug 27 23:23:13 1996
-+++ signify.pius/README	Thu Feb 10 01:42:57 2000
-@@ -18,5 +18,6 @@
- 	$ signify --input=examples/SimpleOrColumned
- 	$ signify --input=examples/Complex
- 
--Then copy one of these to your home directory under ".signify" and
--make your own signatures for the world to see.
-+Then copy one of these to your $CONFIG_DIR directory under "signify" 
-+( or home directory under ".signify" ) and make your own signatures 
-+for the world to see.
---- signify/signify.1	Mon Jan 18 05:14:39 1999
-+++ signify.pius/signify.1	Thu Feb 10 01:42:57 2000
+diff -Nru signify/signify.1 signify.new/signify.1
+--- signify/signify.1	Fri Jul  9 05:10:44 1999
++++ signify.new/signify.1	Thu Feb  1 21:57:26 2001
 @@ -30,12 +30,14 @@
  signify - Program to generate semi-random signatures
  
@@ -63,16 +53,16 @@
  signature data) and those lines starting with a hash character (#) are
  completely ignored.  Those lines starting with a percent sign (%) are
  considered commands and affect the way
-@@ -103,7 +105,7 @@
- replaced by the value corresponding to the name "WORD".  Case is
- significant.  By default, these variables look up the values inside
- the environment variables, but can also be defined within the
+@@ -108,7 +110,7 @@
+ character is not a letter, digit, or underscore.  By default, these
+ variables look up values inside the environment variables, but can
+ also be defined or redefined within the
 -.I .signify
 +.I signify
  file itself with a command such as:
  
  .Vb 1
-@@ -190,7 +192,7 @@
+@@ -211,7 +213,7 @@
  adjust the following lines so they sit at the left margin.  This is
  the default horizontal alignment and most closely reflects how the
  lines are entered into the
@@ -81,7 +71,7 @@
  file itself.  Note that pad spaces will still be placed on both sides
  of a column with this type of alignment unless the
  .I minwidth
-@@ -249,7 +251,7 @@
+@@ -270,7 +272,7 @@
  like to further the development of such software, it is asked (but by
  no means required) that you put something like the following in the
  quotes section of your
@@ -90,13 +80,14 @@
  file.
  
  .Vb 2
---- signify/signify.pl	Mon Jan 18 05:19:06 1999
-+++ signify.pius/signify.pl	Thu Feb 10 01:54:00 2000
-@@ -25,8 +25,16 @@
- $vars{WEBSITE}	= "http://www.debian.org/";
- $errorfile		= "";
- $outputfifo		= "";
--$inputfile		= "$ENV{HOME}/.signify";
+diff -Nru signify/signify.pl signify.new/signify.pl
+--- signify/signify.pl	Sun Jan 14 04:47:44 2001
++++ signify.new/signify.pl	Thu Feb  1 21:58:22 2001
+@@ -33,8 +33,16 @@
+ @OpenFiles		= ();
+ @OpenPaths		= ();
+ $OutputFifo		= "";
+-$InputFile		= "$ENV{HOME}/.signify";
  
 +if ( "$ENV{CONFIG_DIR}" eq "" || -e "$ENV{HOME}/.signify" ) {
 +    $inputfile	= "$ENV{HOME}/.signify";
@@ -109,4 +100,4 @@
 +}
  
  sub Error {
- 	die "$errorfile:$.:$_[0]\n";
+ 	die "$CurFile:$.:$_[0]\n";

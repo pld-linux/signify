@@ -39,14 +39,12 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 install signify.pl $RPM_BUILD_ROOT/%{_bindir}/signify
 install signify.1 $RPM_BUILD_ROOT/%{_mandir}/man1
 
-gzip -9nf examples/* README COPYING
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING.gz README.gz
+%doc COPYING README
 %doc examples
 
 %attr(755,root,root) %{_bindir}/signify

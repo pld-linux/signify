@@ -1,0 +1,64 @@
+Summary:     Random signature generator
+Summary(pl): Generator losowych syngaturek
+Name:	     signify
+Version:     1.05
+Release:     1d
+Copyright:   public domain
+Vendor:	     Brian White <bcwhite@pobox.com>
+Group:	     Applications/Mail
+Group(pl):   Aplikacje/Poczta
+Source:	     %{name}-%{version}.tar.gz
+URL:	     ftp://sunsite.unc.edu/pub/Linux/utils/text
+BuildArch:   noarch
+Requires:    perl
+BuildRoot:	/tmp/%{name}-%{version}-buildroot
+
+%description
+Signify is a neat little Perl program that allows a random
+signature to be generated from a set of rules.  Each section
+can be one of an unlimited number of possibilities, each with
+its own weighting so those really cool quotes can appear more
+often than others.  Sections can also be placed next to each
+other vertically to create columns.  Each section can be
+formatted independently as left/right/center and
+top/bottom/vcenter.
+
+%description -l pl
+Signify jest malym programem w Perlu, który pozwala na generowanie
+sygnatur za pomoc± ustalonych regu³. Ka¿da sekcja mo¿e zowieraæ
+nieograniczon± liczbê kombinacji, mo¿na ustawiæ priorytet, które
+cytaty maj± byæ czê¶ciej wy¶wietlane od innych. Sekcje mog± byæ
+byæ formatowane w kolumnach, jak równie¿ tekst mo¿e byæ wyrównywany
+do lewej/prawej/¶rodka, pionowo do góry/na ¶rodku/na dole
+
+%prep
+%setup -q -n %{name}
+%build
+
+%install
+rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT/%{_bindir}
+install -d $RPM_BUILD_ROOT/%{_mandir}/man1
+install -d $RPM_BUILD_ROOT/%{_docdir}
+
+gzip -9nf signify.1
+gzip -9nf examples/*
+gzip -9nf README COPYING
+
+install signify.pl $RPM_BUILD_ROOT/%{_bindir}/signify
+install signify.1.gz $RPM_BUILD_ROOT/%{_mandir}/man1
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%files
+%defattr(644,root,root,755)
+%doc COPYING.gz README.gz
+%doc examples/
+
+%attr(755,root,root) %{_bindir}/signify
+%{_mandir}/man1/*
+
+%changelog
+* Fri Jun 11 1999 Bartosz Waszak <waszi@free.net.pl>
+- initial rpm release

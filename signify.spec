@@ -24,7 +24,7 @@ top/bottom/vcenter.
 
 %description -l pl
 Signify jest malym programem w Perlu, który pozwala na generowanie
-sygnatur za pomoc± ustalonych regu³. Ka¿da sekcja mo¿e zowieraæ
+sygnatur za pomoc± ustalonych regu³. Ka¿da sekcja mo¿e zawieraæ
 nieograniczon± liczbê kombinacji, mo¿na ustawiæ priorytet, które
 cytaty maj± byæ czê¶ciej wy¶wietlane od innych. Sekcje mog± byæ byæ
 formatowane w kolumnach, jak równie¿ tekst mo¿e byæ wyrównywany do

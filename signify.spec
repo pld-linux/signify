@@ -9,7 +9,7 @@ Group(pl):	Aplikacje/Poczta
 Source:		ftp://sunsite.unc.edu/pub/Linux/utils/text%{name}-%{version}.tar.gz
 BuildArch:	noarch
 Requires:	perl
-BuildRoot:	/tmp/%{name}-%{version}-buildroot
+BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
 Signify is a neat little Perl program that allows a random
@@ -40,7 +40,7 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 install signify.pl $RPM_BUILD_ROOT/%{_bindir}/signify
 install signify.1 $RPM_BUILD_ROOT/%{_mandir}/man1
 
-gzip -9nf $RPM_BUILD_ROOT/%{_mandir}/man1/signify.1 \
+gzip -9nf $RPM_BUILD_ROOT/%{_mandir}/man1/* \
 	examples/* README COPYING
 
 %clean
@@ -56,4 +56,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %changelog
 * Fri Jun 11 1999 Bartosz Waszak <waszi@free.net.pl>
-- initial rpm release
+- initial rpm release.

@@ -90,12 +90,12 @@ diff -Nru signify/signify.pl signify.new/signify.pl
 -$InputFile		= "$ENV{HOME}/.signify";
  
 +if ( "$ENV{CONFIG_DIR}" eq "" || -e "$ENV{HOME}/.signify" ) {
-+    $inputfile	= "$ENV{HOME}/.signify";
++    $InputFile	= "$ENV{HOME}/.signify";
 +} else {
 +    if ( $ENV{CONFIG_DIR} =~ m=^/=) {
-+    	$inputfile = "$ENV{CONFIG_DIR}/signify";
++    	$InputFile = "$ENV{CONFIG_DIR}/signify";
 +    } else {
-+	$inputfile = "$ENV{HOME}/$ENV{CONFIG_DIR}/signify";
++	$InputFile = "$ENV{HOME}/$ENV{CONFIG_DIR}/signify";
 +    }
 +}
  

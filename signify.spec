@@ -5,9 +5,6 @@ Version:	1.07
 Release:	2
 License:	public domain
 Group:		Applications/Mail
-Group(de):	Applikationen/Post
-Group(pl):	Aplikacje/Poczta
-Group(pt):	Aplicações/Correio Eletrônico
 Source0:	ftp://sunsite.unc.edu/pub/Linux/utils/text/%{name}-%{version}.tar.gz
 Patch0:		%{name}-home_etc.patch
 BuildArch:	noarch

@@ -10,7 +10,7 @@ Source:		ftp://sunsite.unc.edu/pub/Linux/utils/text/%{name}-%{version}.tar.gz
 Patch:		signify-home_etc.patch
 BuildArch:	noarch
 Requires:	perl
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Signify is a neat little Perl program that allows a random signature to be

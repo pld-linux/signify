@@ -1,3 +1,4 @@
+%include	/usr/lib/rpm/macros.perl
 Summary:	Random signature generator
 Summary(pl):	Generator losowych sygnaturek
 Name:		signify
@@ -8,7 +9,7 @@ Group:		Applications/Mail
 Source0:	ftp://sunsite.unc.edu/pub/Linux/utils/text/%{name}-%{version}.tar.gz
 Patch0:		%{name}-home_etc.patch
 BuildArch:	noarch
-Requires:	perl
+BuildRequires:	rpm-perlprov
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

@@ -53,7 +53,3 @@ rm -rf $RPM_BUILD_ROOT
 
 %attr(755,root,root) %{_bindir}/signify
 %{_mandir}/man1/*
-
-%changelog
-* Fri Jun 11 1999 Bartosz Waszak <waszi@free.net.pl>
-- initial rpm release.

@@ -32,7 +32,7 @@ lewej/prawej/¶rodka, pionowo do góry/na ¶rodku/na dole.
 
 %prep
 %setup -q -n %{name}
-%patch -p1
+%patch0 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT

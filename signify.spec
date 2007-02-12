@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	Random signature generator
-Summary(pl):	Generator losowych sygnaturek
+Summary(pl.UTF-8):   Generator losowych sygnaturek
 Name:		signify
 Version:	1.07
 Release:	3
@@ -22,13 +22,13 @@ can also be placed next to each other vertically to create columns.
 Each section can be formatted independently as left/right/center and
 top/bottom/vcenter.
 
-%description -l pl
-Signify jest malym programem w Perlu, który pozwala na generowanie
-sygnatur za pomoc± ustalonych regu³. Ka¿da sekcja mo¿e zawieraæ
-nieograniczon± liczbê kombinacji, mo¿na ustawiæ priorytet, które
-cytaty maj± byæ czê¶ciej wy¶wietlane od innych. Sekcje mog± byæ byæ
-formatowane w kolumnach, jak równie¿ tekst mo¿e byæ wyrównywany do
-lewej/prawej/¶rodka, pionowo do góry/na ¶rodku/na dole.
+%description -l pl.UTF-8
+Signify jest malym programem w Perlu, ktÃ³ry pozwala na generowanie
+sygnatur za pomocÄ… ustalonych reguÅ‚. KaÅ¼da sekcja moÅ¼e zawieraÄ‡
+nieograniczonÄ… liczbÄ™ kombinacji, moÅ¼na ustawiÄ‡ priorytet, ktÃ³re
+cytaty majÄ… byÄ‡ czÄ™Å›ciej wyÅ›wietlane od innych. Sekcje mogÄ… byÄ‡ byÄ‡
+formatowane w kolumnach, jak rÃ³wnieÅ¼ tekst moÅ¼e byÄ‡ wyrÃ³wnywany do
+lewej/prawej/Å›rodka, pionowo do gÃ³ry/na Å›rodku/na dole.
 
 %prep
 %setup -q -n %{name}

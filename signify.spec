@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	Random signature generator
-Summary(pl.UTF-8):   Generator losowych sygnaturek
+Summary(pl.UTF-8):	Generator losowych sygnaturek
 Name:		signify
 Version:	1.07
 Release:	3
